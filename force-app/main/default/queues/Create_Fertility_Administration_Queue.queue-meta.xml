@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Create Fertility Administration Queue</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Create_Fertility_Admin</publicGroup>
+        </publicGroups>
+        <users>
+            <user>evelyn.fodor@create-health.com.au</user>
+            <user>grace.henry@create-health.com.au</user>
+            <user>jenna.lappe@create-health.com.au</user>
+            <user>katie.butera@create-health.com.au</user>
+            <user>leila.najjar@create-health.com.au</user>
+            <user>rach.weir@create-health.com.au</user>
+            <user>ratna.djohan@create-health.com.au</user>
+            <user>samantha.tarachand@create-health.com.au</user>
+            <user>steph.negri@create-health.com.au</user>
+            <user>suraya.garad@create-health.com.au</user>
+            <user>terri.nas@create-health.com.au</user>
+            <user>tharushi.liyanage@create-health.com.au</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

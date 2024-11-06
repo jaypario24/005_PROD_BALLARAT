@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Email_Insem</name>
+        <label>Email Insem</label>
+        <locationX>308</locationX>
+        <locationY>431</locationY>
+        <actionName>Cycle__c.Email_on_Insem_Chnage</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Cycle__c.Email_on_Insem_Chnage</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <decisions>
+        <name>Within_an_Hour_of_Creation</name>
+        <label>Within an Hour of Creation?</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Email_Insem</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Less_than_an_hour</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>DateTimeTriggerVar</elementReference>
+                </rightValue>
+            </conditions>
+            <label>Less than an hour</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>DateTimeTriggerVar</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Record.CreatedDate}+(60/1440)</expression>
+    </formulas>
+    <interviewLabel>Auto Email Create On Insem Method Change {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Email Create On Insem Method Change</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Within_an_Hour_of_Creation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Insemination_Method__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Clinic_Cycle_Being_Undertaken_at_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Create Fertility</stringValue>
+            </value>
+        </filters>
+        <object>Cycle__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

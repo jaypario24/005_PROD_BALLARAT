@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Create Fertility Nursing Queue</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Create_Fertility_Nursing</publicGroup>
+        </publicGroups>
+        <users>
+            <user>kristen.su@createfertility.com.au</user>
+            <user>michelle.sullivan@createfertility.com.au</user>
+            <user>minette.blake@createfertility.com.au</user>
+            <user>natalie.dalton@createfertility.com.au</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

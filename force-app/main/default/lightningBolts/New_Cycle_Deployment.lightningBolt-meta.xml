@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningBolt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <category>HealthcareLifeSciences</category>
+    <lightningBoltFeatures>
+        <order>1</order>
+        <title>New Cycle for ART</title>
+    </lightningBoltFeatures>
+    <lightningBoltImages>
+        <image>X5_Forces</image>
+        <order>1</order>
+    </lightningBoltImages>
+    <lightningBoltItems>
+        <name>Laboratory</name>
+        <type>CustomApplication</type>
+    </lightningBoltItems>
+    <lightningBoltItems>
+        <name>New_Cycle</name>
+        <type>FlowCategory</type>
+    </lightningBoltItems>
+    <masterLabel>New Cycle Deployment</masterLabel>
+    <publisher>Pario Solutions</publisher>
+    <summary>New Cycle Information</summary>
+</LightningBolt>

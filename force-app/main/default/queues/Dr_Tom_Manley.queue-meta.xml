@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Dr Tom Manley</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Create_Fertility_Nursing</publicGroup>
+        </publicGroups>
+        <users>
+            <user>tom.manley@create-health.com.au</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

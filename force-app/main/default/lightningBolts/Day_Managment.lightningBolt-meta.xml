@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningBolt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <category>FinancialServices</category>
+    <lightningBoltFeatures>
+        <order>1</order>
+        <title>Day Management</title>
+    </lightningBoltFeatures>
+    <lightningBoltImages>
+        <image>download1</image>
+        <order>1</order>
+    </lightningBoltImages>
+    <lightningBoltItems>
+        <name>Cycle_Day_Updates</name>
+        <type>FlowCategory</type>
+    </lightningBoltItems>
+    <masterLabel>Day Managment</masterLabel>
+    <publisher>Pario</publisher>
+    <summary>Day managements</summary>
+</LightningBolt>

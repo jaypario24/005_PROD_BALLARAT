@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Staff Member Allocated to Complete Task --></label>
+    <name>Staff_Member_Allocated_to_Complete_Task__c</name>
+    <relationshipLabel><!-- To Do&apos;s --></relationshipLabel>
+</CustomFieldTranslation>

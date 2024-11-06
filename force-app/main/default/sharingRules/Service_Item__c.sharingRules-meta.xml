@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Ballarat_Only</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ballarat Only</label>
+        <sharedTo>
+            <group>Ballarat_IVF</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Clinic_Name_for_Sharing__c</field>
+            <operation>equals</operation>
+            <value>Ballarat IVF</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Create_Only</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Create Only</label>
+        <sharedTo>
+            <group>Create_Fertility</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Clinic_Name_for_Sharing__c</field>
+            <operation>equals</operation>
+            <value>Create Fertility</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

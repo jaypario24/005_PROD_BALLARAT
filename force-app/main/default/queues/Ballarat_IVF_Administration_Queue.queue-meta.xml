@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Ballarat IVF Administration Queue</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Ballarat_IVF_Admin</publicGroup>
+        </publicGroups>
+        <users>
+            <user>lanse.gracepeary@gmail.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>
